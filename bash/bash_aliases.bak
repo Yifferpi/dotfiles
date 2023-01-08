@@ -1,0 +1,6 @@
+
+#Run Cisco AnyConnect VPN Client for connecting to ETH
+alias anyconnect='/opt/cisco/anyconnect/bin/vpnui'
+#lock the screen
+alias lock='i3lock -n -c 000000'
+alias mux='tmuxinator'

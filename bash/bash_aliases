@@ -1,0 +1,33 @@
+
+# basic aliases
+#alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias open='xdg-open'
+
+if [ -x /usr/bin/dircolors ]; then
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+	alias ls='ls --color=auto'
+	alias dir='dir --color=auto'
+	alias vdir='vdir --color=auto'
+		    
+	alias grep='grep --color=auto'
+fi
+
+# see if program is installed
+if command -v bat > /dev/null; then
+    # program is installed
+	alias cat=bat
+fi
+
+
+#Run Cisco AnyConnect VPN Client for connecting to ETH
+alias anyconnect='/opt/cisco/anyconnect/bin/vpnui'
+#lock the screen
+alias lock='i3lock -n -c 000000'
+alias mux='tmuxinator'
+
+# knowledge
+alias kn-tar="echo 'tar -xf for .tar.gz files'"
