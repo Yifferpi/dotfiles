@@ -1,4 +1,3 @@
-# PrivateScripts
+# dotfiles
 
-This repo contains all scripts and configs that are
-either sensitive or only of use to myself.
+This repo contains install scripts and personal configuration files for a number of tools and applications.
