@@ -53,12 +53,12 @@ function install_folder() {
 	fi
 }
 # Install dependencies
-sudo pacman -S i3-wm i3status 
+sudo pacman -S --needed i3-wm i3status 
 # launcher and notification server
-sudo pacman -S rofi dunst
+sudo pacman -S --needed rofi dunst
 
 # transparent background, needs support from terminal
-sudo pacman -S nitrogen picom
+sudo pacman -S --needed nitrogen picom
 
 # i3 config
 install_folder "i3"
