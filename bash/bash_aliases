@@ -22,9 +22,12 @@ if command -v bat > /dev/null; then
 	alias cat=bat
 fi
 
+alias mount='sudo mount --mkdir -o uid=$UID,gid=$UID'
+alias umount='sudo umount'
+
 
 #Run Cisco AnyConnect VPN Client for connecting to ETH
-alias anyconnect='/opt/cisco/anyconnect/bin/vpnui'
+alias anyconnect='sudo /opt/cisco/secureclient/bin/vpnui &'
 #lock the screen
 alias lock='i3lock -n -c 000000'
 alias mux='tmuxinator'

@@ -59,6 +59,8 @@ sudo pacman -S --needed rofi dunst
 
 # transparent background, needs support from terminal
 sudo pacman -S --needed nitrogen picom
+# screenshot tool
+sudo pacman -S --needed maim
 
 # i3 config
 install_folder "i3"

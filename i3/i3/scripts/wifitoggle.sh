@@ -1,6 +1,6 @@
 #! /bin/bash
 
-connected=`nmcli dev status | grep wifi | grep -o unavailable`
+connected=$(nmcli dev status | grep wifi | grep -o unavailable)
 
 if [ "$connected" == "unavailable" ]; then
     nmcli radio wifi on

@@ -8,7 +8,7 @@ sudo pacman -Sy
 sudo pacman -S --needed ghostscript libjpeg libpng freetype2
 
 # Install cups
-sudo pacman -S --needed cups
+sudo pacman -S --needed cups cups-filters foomatic-db-engine foomatic-db foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds
 
 #ghostscript: An interpreter for the PostScript language and for PDF. It is used by cups to convert PostScript and PDF files to a format that can be printed.
 #libjpeg: A library for reading and writing JPEG image files. It is used by cups to support printing of JPEG images.

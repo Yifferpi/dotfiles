@@ -1,0 +1,2 @@
+- put hotkeys in distro agnostic scripts
+- add send-notify functionality to e.g. screenshot utility
