@@ -7,6 +7,9 @@ sudo pacman -Sy
 # Install dependencies
 sudo pacman -S --needed ghc alex happy pkg-config zlib
 
+# render mermaid charts with pandoc
+npm i -g mermaid-filter
+
 #ghc: Glasgow Haskell Compiler, a compiler for the functional programming language Haskell. Pandoc is written in Haskell and requires the GHC to build and run.
 #alex: A lexical analyzer generator for Haskell. It is used to generate the lexer for the Pandoc parser.
 #happy: A parser generator for Haskell. It is used to generate the parser for the Pandoc parser.

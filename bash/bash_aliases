@@ -24,6 +24,7 @@ fi
 
 alias mount='sudo mount --mkdir -o uid=$UID,gid=$UID'
 alias umount='sudo umount'
+alias egrep='grep -E --color auto'
 
 
 #Run Cisco AnyConnect VPN Client for connecting to ETH

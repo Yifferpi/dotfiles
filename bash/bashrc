@@ -44,3 +44,6 @@ fi
 if command -v pandoc > /dev/null; then
 	eval "$(pandoc --bash-completion)"
 fi
+
+export PATH="$PATH:/home/yifferpi/.local/bin"
+export npm_config_prefix="/home/yifferpi/local"

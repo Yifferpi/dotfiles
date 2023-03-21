@@ -5,7 +5,7 @@
 sudo pacman -Sy
 
 # Install dependencies
-sudo pacman -S --needed ghostscript libjpeg libpng freetype2
+sudo pacman -S --needed ghostscript libjpeg libpng libtiff freetype2
 
 # Install cups
 sudo pacman -S --needed cups cups-filters foomatic-db-engine foomatic-db foomatic-db-ppds foomatic-db-nonfree foomatic-db-nonfree-ppds
