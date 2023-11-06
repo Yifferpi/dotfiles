@@ -33,5 +33,9 @@ alias anyconnect='sudo /opt/cisco/secureclient/bin/vpnui &'
 alias lock='i3lock -n -c 000000'
 alias mux='tmuxinator'
 
+# Git
+alias git-graph='git log --graph --all --decorate --oneline'
+
 # knowledge
-alias kn-tar="echo 'tar -xf for .tar.gz files'"
+alias kn-targz="echo 'tar -xf for .tar.gz files'"
+alias kn-gz="echo 'gzip -d for .gz files'"

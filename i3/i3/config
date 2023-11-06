@@ -14,13 +14,18 @@ set $touchpad "DLL077A:01 06CB:76AF Touchpad"
 set $tap_enabled_prop "libinput Tapping Enabled"
 exec xinput set-prop $touchpad $tap_enabled_prop 1
 
-exec_always xrandr --output eDP-1 --scale 0.65x0.65
-#exec_always xrandr --output eDP-1 --dpi 288
+#exec_always xrandr --output eDP-1 --scale 0.65x0.65
+exec_always xrandr --output eDP-1 --scale 0.65
+#exec_always xrandr --output eDP-1 --dpi 48
+#exec_always xrandr --output eDP-1 --dpi 48
+
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id sleep 1
 exec --no-startup-id picom -b
 
-exec --no-startup-id gnome-keyring-daemon
+# let dbus know about graphical environment
+exec dbus-update-activation-environment --all
+exec --no-startup-id gnome-keyring-daemon --start
 
 # start notification server
 # exec_always is executed on i3 reload, exec is not
