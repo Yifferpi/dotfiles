@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/yifferpi/gitrepos/dns-amp-common/resolver_measurement/discovery/data/2023-12-07'
+let g:netrw_dirhist_5='/etc/wireguard'
+let g:netrw_dirhist_4='/home/yifferpi/gitrepos/dns-amp-common/resolver_measurement/analysis/600k1vp'
+let g:netrw_dirhist_3='/home/yifferpi/gitrepos/dns-amp-common/resolver_measurement/analysis/240111-public60'
+let g:netrw_dirhist_2='/home/yifferpi/gitrepos/dns-amp-common/.git'
+let g:netrw_dirhist_1='/home/yifferpi/gitrepos/ShellWorkshop'
