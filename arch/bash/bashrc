@@ -1,6 +1,7 @@
 #
 # ~/.bashrc
 #
+# hello soso
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -9,6 +10,10 @@
 # start window manager
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 	exec startx /usr/bin/i3
+fi
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ]; then
+   #XDG_CURRENT_DESKTOP=sway dbus-run-session sway -c /home/yifferpi/.config/sway/config
+	XDG_CURRENT_DESKTOP=sway exec /usr/bin/sway -c /home/yifferpi/.config/sway/config
 fi
 
 

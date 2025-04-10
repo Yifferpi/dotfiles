@@ -1,0 +1,17 @@
+
+# Enable tapping of the mouse
+# This is still for X and i3
+set $touchpad "DLL077A:01 06CB:76AF Touchpad"
+set $tap_enabled_prop "libinput Tapping Enabled"
+exec xinput set-prop $touchpad $tap_enabled_prop 1
+
+# Wifi On/Off hotkey
+bindsym Home exec --no-startup-id /home/yiff/.config/i3/scripts/wifitoggle.sh
+
+# Brightness hotkeys
+# through X11, changing gamma value
+#bindsym Control+Up exec --no-startup-id /home/yifferpi/.config/i3/scripts/brightness.sh up
+#bindsym Control+Down exec --no-startup-id /home/yifferpi/.config/i3/scripts/brightness.sh down
+# hardware brightness
+bindsym Control+Up exec --no-startup-id /usr/bin/brightnessctl set 10%+
+bindsym Control+Down exec --no-startup-id /usr/bin/brightnessctl set 10%-

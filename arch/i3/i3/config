@@ -19,9 +19,14 @@ exec_always xrandr --output eDP-1 --scale 0.65
 #exec_always xrandr --output eDP-1 --dpi 48
 #exec_always xrandr --output eDP-1 --dpi 48
 
-exec --no-startup-id nitrogen --restore
-exec --no-startup-id sleep 1
-exec --no-startup-id picom -b
+#exec --no-startup-id nitrogen --restore
+#exec --no-startup-id sleep 1
+#exec --no-startup-id picom -b
+# Restart compositors properly
+exec --no-startup-id pkill picom; sleep 1; picom -b
+
+# Delay Nitrogen to prevent X errors
+exec --no-startup-id sleep 2 && nitrogen --restore
 
 # let dbus know about graphical environment
 exec dbus-update-activation-environment --all
@@ -43,10 +48,12 @@ bindsym Control+Up exec --no-startup-id /usr/bin/brightnessctl set 10%+
 bindsym Control+Down exec --no-startup-id /usr/bin/brightnessctl set 10%-
 
 # Audio hotkeys
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-#mute not yet working!!
-bindsym --release XF86AudioMute exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ 5%-
+bindsym --release XF86AudioMute exec --no-startup-id wpctl set-volume @DEFAULT_SINK@ toggle
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+#bindsym --release XF86AudioMute exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ toggle
 # Wifi On/Off hotkey
 bindsym Home exec --no-startup-id /home/yiff/.config/i3/scripts/wifitoggle.sh
 

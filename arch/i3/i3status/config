@@ -12,8 +12,7 @@ general {
 }
 
 order += "path_exists HomeVPN"
-order += "ethernet home"
-order += "ethernet dmz"
+order += "ethernet tower"
 order += "ethernet _first_"
 order += "wireless wlp60s0"
 order += "disk /"
@@ -22,16 +21,11 @@ order += "load"
 order += "tztime local"
 
 path_exists HomeVPN {
-        path = "/proc/sys/net/ipv4/conf/home"
+        path = "/proc/sys/net/ipv4/conf/tower"
 }
 
-ethernet home {
+ethernet tower {
         format_up = "Home: %ip"
-        format_down = ""
-        color_good = "#0e8eef"
-}
-ethernet dmz {
-        format_up = "DMZ: %ip"
         format_down = ""
         color_good = "#0e8eef"
 }
