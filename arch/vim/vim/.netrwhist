@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/yifferpi/dotfiles/ubuntu/sway'
+let g:netrw_dirhist_7='/home/yifferpi/gitrepos/dns-amp-common/resolver_measurement/validation/config/loadbalancer'
 let g:netrw_dirhist_6='/home/yifferpi/gitrepos/dns-amp-common/resolver_measurement/discovery/data/2023-12-07'
 let g:netrw_dirhist_5='/etc/wireguard'
 let g:netrw_dirhist_4='/home/yifferpi/gitrepos/dns-amp-common/resolver_measurement/analysis/600k1vp'
